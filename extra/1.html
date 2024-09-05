@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Montserrat;
+            background-color: #888
+        }
+
+        .s-button {
+            font-size: 14px !important;
+            line-height: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 4px;
+            padding: 12px 24px;
+            text-decoration: none;
+            overflow: hidden;
+        }
+
+        .swipe2right {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            transform: perspective(1px) translateZ(0);
+            transition-property: color;
+            transition-duration: 0.3s;
+        }
+
+        .swipe2right::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            transform: scaleX(0);
+            transform: scaleY(0);
+            transform-origin: 0 50%;
+            transition-property: transform;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+        }
+
+        .swipe2right:hover::before {
+            transform: scaleX(1);
+            transform: scale(1);
+        }
+
+        .y2w {
+            background-color: #ffd800;
+            color: #000;
+        }
+
+        .y2w::before {
+            background-color: #fff;
+        }
+
+        .w2y:hover,
+        .y2w:hover {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="" class="s-button y2w swipe2right">Yellow to white</a>
+
+</body>
+
+</html>
