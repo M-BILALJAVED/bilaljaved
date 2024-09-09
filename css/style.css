@@ -41,6 +41,9 @@
     --bg-gradient: linear-gradient(45deg, var(--color-secondary) 0%, var(--color-primary) 70%);
     --bg-gradient: linear-gradient(45deg, var(--color-secondary) 0%, var(--color-primary) 70%);
 }
+[data-theme="dark"] {
+  
+  }
 
 * {
     padding: 0;
@@ -200,6 +203,19 @@ body {
         width: 0%;
         opacity: 0.5;
     }
+}
+
+/* scroll */
+.scroll-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    z-index: 102;
+    display: none;
+}
+
+button:focus {
+    box-shadow: none !important;
 }
 
 

@@ -1,0 +1,34 @@
+<!-- Toggle Button -->
+<button id="theme-toggle">Toggle Dark Mode</button>
+
+<!-- CSS Variables for Light and Dark Themes -->
+<style>
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+</style>
+
+<script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const currentTheme = localStorage.getItem('theme') || 'light';
+
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  themeToggle.addEventListener('click', function() {
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  });
+</script>
