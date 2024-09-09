@@ -10,16 +10,52 @@
   <link rel="stylesheet" href="/css/responsive.css">
   <!-- bootstrap css -->
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">  -->
   <!-- fontawesome -->
   <script src="https://kit.fontawesome.com/57efafa6c2.js" crossorigin="anonymous"></script>
   <!-- Local Themify Icons -->
   <link rel="stylesheet" href="themify-icons/themify-icons.css">
+  <!-- cssanimation.io css -->
+  <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet">
+  <!-- animation.style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
+
+  <!----------------------------- header-below-md ----------------------------->
+  <header class="header-below-md d-md-none d-flex justify-content-center">
+    <img class="" src="/assets/logo-icon.png" alt="">
+    <i class="fa-solid fa-bars" class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasleft" aria-controls="offcanvasleft"></i>
+    <!--  -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasleft" aria-labelledby="offcanvasleftLabel">
+      <div class="offcanvas-header">
+        <span id="offcanvasleftLabel">
+          <img src="/assets/logo-icon.png" alt="">
+        </span>
+        <button class="fa-solid fa-xmark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- <button type="button" ></button> -->
+      </div>
+      <div class="offcanvas-body">
+        <ul class="ps-2">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#expertise">expertise</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#blog">blog</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!----------------------------- header-below-md ----------------------------->
+
   <!----------------------------- header-left ----------------------------->
-  <header class="header-left d-flex flex-column position-fixed justify-content-between align-items-center">
+  <header class="header-left d-md-flex d-none flex-column position-fixed justify-content-between align-items-center">
     <div class="logo">
       <a href="#"><img src="/assets/logo-icon.png" alt="" srcset=""></a>
     </div>
@@ -69,21 +105,23 @@
     <div class="container">
       <div class="row justify-content-center align-items-center">
         <div class="col-lg-6 ">
-          <div class="">
+          <div class="text-center text-md-start">
             <h1>Hey <img src="assets/baner-hand.png" width="40px" alt="Icon"> <br> I'm <span>BILAL JAVED</span></h1>
             <h3 class="banner-title">
-              <div class="animatn-text overflow-hidden d-flex flex-column">
-                <span>Web Developer</span>
+              <div class="animatn-text">
+                <ul>
+                  <li class="mx-auto mx-md-0"><span id="bannerTyping"></span></li>
+                </ul>
               </div>
               <div class=" mt-5">
-                <button class="my-btn primary-btn">My Resume</button>
-                <button class="my-btn secondary-btn">Hire me</button>
+                <button class="my-btn primary-btn"><span>Locate</span></button>
+                <button class="my-btn secondary-btn"><span>Hire me</span></button>
               </div>
             </h3>
           </div>
         </div>
         <div class="banner-pic col-lg-6 d-flex justify-content-center">
-          <img class="" src="/assets/my-pic.png" width="400px" height="120%" alt="">
+          <img style="max-width: 300px;" src="/assets/my-pic.png" height="120%" alt="">
         </div>
       </div>
     </div>
@@ -100,20 +138,20 @@
         <h4 class="mt-5">My Expertise</h4>
         <h1 class="position-relative">What I Do</h1>
       </div>
-      <div class="row justify-content-around mt-5">
-        <div class="col-3 py-4">
+      <div class="row justify-content-around mt-5 text-center text-md-start">
+        <div class="col-md-4 py-4" style="max-width: 250px;">
           <img class="mb-4" src="/assets/1.png" width="80px" alt="">
           <h3 class="mb-3"><a class="text-white" href="">Website design</a></h3>
           <p>Lorem ipsum dolor, sit amet adipisicing elit. quidem libero fugit nisi quos quae, totam iure, illo aut
             laborum suscipit! Quos maiores vel odit totam unde lore alias!</p>
         </div>
-        <div class="col-3 py-4">
+        <div class="col-md-4 py-4" style="max-width: 250px;">
           <img class="mb-4" src="/assets/2.png" width="80px" alt="">
           <h3 class="mb-3"><a class="text-white" href="">Website design</a></h3>
           <p>Lorem ipsum dolor, sit amet adipisicing elit. quidem libero fugit nisi quos quae, totam iure, illo aut
             laborum suscipit! Quos maiores vel odit totam unde lore alias!</p>
         </div>
-        <div class="col-3 py-4">
+        <div class="col-md-4 py-4" style="max-width: 250px;">
           <img class="mb-4" src="/assets/3.png" width="80px" alt="">
           <h3 class="mb-3"><a class="text-white" href="">Website design</a></h3>
           <p>Lorem ipsum dolor, sit amet adipisicing elit. quidem libero fugit nisi quos quae, totam iure, illo aut
@@ -125,12 +163,665 @@
   </section>
   <!----------------------------- service ----------------------------->
 
+  <!----------------------------- Recent project ----------------------------->
+  <section class="recent-project-wrapper">
+    <div class="container my-5">
+      <div class="row pt-5">
+        <div class="col-12 text-md-start text-center">
+          <h4>recent project</h4>
+        </div>
+      </div>
+      <div class="row pb-5  fw-bold">
+        <div class="col-md-6 mt-3 mt-md-0 text-md-start text-center">
+          <h2>Look at my portfolio and <br> give me your feedback</h2>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0 d-flex gap-5 justify-content-md-start justify-content-center">
+          <div class="for-line text-center">
+            <h1 class="fw-bolder">256K</h1>
+            <span>Completed Project</span>
+          </div>
+          <div class="text-center">
+            <h1 class="fw-bolder">94%</h1>
+            <span>Positive Rating</span>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="row-gap: 50px;">
+        <div class="col-md-4">
+          <div class="macc-screen">
+            <img src="/assets/mac.png" alt="">
+            <span class="colorrrr">
+              <img src="/assets/rp1.png" alt="">
+            </span>
+            <span></span>
+          </div>
+        </div>
+        <!-- reapeat -->
+        <div class="col-md-4">
+          <div class="macc-screen">
+            <img src="/assets/mac.png" alt="">
+            <span class="colorrrr">
+              <img src="/assets/rp2.png" alt="">
+            </span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="macc-screen">
+            <img src="/assets/mac.png" alt="">
+            <span class="colorrrr">
+              <img src="/assets/rp3.png" alt="">
+            </span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="macc-screen">
+            <img src="/assets/mac.png" alt="">
+            <span class="colorrrr">
+              <img src="/assets/rp4.png" alt="">
+            </span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="macc-screen">
+            <img src="/assets/mac.png" alt="">
+            <span class="colorrrr">
+              <img src="/assets/rp5.png" alt="">
+            </span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="macc-screen">
+            <img src="/assets/mac.png" alt="">
+            <span class="colorrrr">
+              <img src="/assets/rp6.png" alt="">
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!----------------------------- Recent project ----------------------------->
+
+  <!----------------------------- about us ----------------------------->
+  <section class="about-wapper">
+    <div class="container">
+      <div class="row flex-wrap-reverse gap-5 gap-md-0">
+        <div class="col-md-6">
+          <div class="about-left">
+            <img src="/assets/abpic.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 my-auto text-center text-md-start">
+          <h4 class="about-right-title">About Me</h4>
+          <h2>I can develop <br> that help people</h2>
+          <span>Hi, my name is Adriano Smith and I began using WordPress when it first began. I've spent most of my
+            waking hours for the last ten years designing, programming and operating WordPress sites. One of specialties
+            is taking an idea from scratch and creating a full-fledged platform. I go beyond to produce sites with a
+            unique.</span>
+          <div class="ab-wordpress d-md-flex align-items-center gap-4 pt-4">
+            <i class="fa-brands fa-wordpress "></i>
+            <div class="mt-md-0 mt-4">
+              <h4>Professional WordPress <br class="d-block d-md-none"> Developer</h4>
+              <span>Top Rated - Upwork</span>
+            </div>
+          </div>
+          <hr>
+          <div class="ab-layergroup d-md-flex align-items-center gap-4">
+            <i class="fa-solid fa-layer-group"></i>
+            <div class="mt-md-0 mt-4">
+              <h4>Senior HTML Developer</h4>
+              <span>Level Two Seller - Fiverr</span>
+            </div>
+          </div>
+          <div class="bell-pic">
+            <img src="/assets/bell-pic.png" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!----------------------------- about us ----------------------------->
+
+  <!----------------------------- resume ----------------------------->
+  <section class="resume-wrapper">
+    <div class="container">
+      <div class="tabs-header">
+        <ul class="nav nav-pills justify-content-between" id="pills-tab" style="margin: 6px !important; row-gap: 10px;">
+          <li class="nav-item">
+            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pills-home">Biography
+              <strong>01</strong></button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-profile">Skills
+              <strong>02</strong></button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-contact">Education
+              <strong>03</strong></button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="tab-content" id="pills-tabContent">
+
+            <!-- Biography Tab -->
+            <div class="tab-pane show active" id="pills-home">
+              <div class="row Biography justify-content-around">
+                <div class="col-lg-5">
+                  <ul>
+                    <li class="d-flex justify-content-between p-lg-2 p-1 position-relative">
+                      <h5>NAME</h5>
+                      <p>RANA BLAL JAVED</p>
+                    </li>
+                    <!-- Repeat these list items as needed -->
+                    <li class="d-flex justify-content-between p-lg-2 p-1 position-relative">
+                      <h5>NAME</h5>
+                      <p>RANA BLAL JAVED</p>
+                    </li>
+                    <li class="d-flex justify-content-between p-lg-2 p-1 position-relative">
+                      <h5>NAME</h5>
+                      <p>RANA BLAL JAVED</p>
+                    </li>
+                    <li class="d-flex justify-content-between p-lg-2 p-1 position-relative">
+                      <h5>NAME</h5>
+                      <p>RANA BLAL JAVED</p>
+                    </li>
+
+                  </ul>
+                </div>
+                <div class="col-lg-5">
+                  <ul>
+                    <li class="d-flex justify-content-between p-lg-2 p-1 position-relative">
+                      <h5>NAME</h5>
+                      <p>RANA BLAL JAVED</p>
+                    </li>
+                    <!-- Repeat these list items as needed -->
+                    <li class="d-flex justify-content-between p-lg-2 p-1 position-relative">
+                      <h5>NAME</h5>
+                      <p>RANA BLAL JAVED</p>
+                    </li>
+                    <li class="d-flex justify-content-between p-lg-2 p-1 position-relative">
+                      <h5>NAME</h5>
+                      <p>RANA BLAL JAVED</p>
+                    </li>
+                    <li class="d-flex justify-content-between p-lg-2 p-1 position-relative">
+                      <h5>NAME</h5>
+                      <p>RANA BLAL JAVED</p>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skills Tab -->
+            <div class="Skills tab-pane" id="pills-profile">
+              <div class="row Skills-content align-items-center">
+                <div class="col-lg-2">
+                  <div class="icon d-lg-block d-none">
+                    <i class="fab fa-laravel"></i>
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <h5 class="text-lg-start text-center">Object oriented programming</h5>
+                </div>
+                <div class="col-lg-5">
+                  <div class="progress-box d-flex justify-content-around align-items-center">
+                    <h3>75%</h3>
+                    <div class="progress w-75" style="height: 10px;">
+                      <div class="progress-bar bg-success animate__animated animate__slideInLeft" role="progressbar"
+                        style="width: 75%">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- reapeat -->
+              <div class="row Skills-content align-items-center">
+                <div class="col-lg-2">
+                  <div class="icon d-lg-block d-none">
+                    <i class="fab fa-laravel"></i>
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <h5 class="text-lg-start text-center">Object oriented programming</h5>
+                </div>
+                <div class="col-lg-5">
+                  <div class="progress-box d-flex justify-content-around align-items-center">
+                    <h3>75%</h3>
+                    <div class="progress w-75" style="height: 10px;">
+                      <div class="progress-bar bg-success animate__animated animate__slideInLeft" role="progressbar"
+                        style="width: 75%">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row Skills-content align-items-center">
+                <div class="col-lg-2">
+                  <div class="icon d-lg-block d-none">
+                    <i class="fab fa-laravel"></i>
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <h5 class="text-lg-start text-center">Object oriented programming</h5>
+                </div>
+                <div class="col-lg-5">
+                  <div class="progress-box d-flex justify-content-around align-items-center">
+                    <h3>75%</h3>
+                    <div class="progress w-75" style="height: 10px;">
+                      <div class="progress-bar bg-success animate__animated animate__slideInLeft" role="progressbar"
+                        style="width: 75%">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education Tab -->
+            <div class="Education tab-pane" id="pills-contact">
+              <div class="row justify-content-around" style="row-gap: 20px;">
+                <div class="col-md-5 position-relative" style="border-left: 2px solid;">
+                  <div class="eduction-box ps-4">
+                    <h4>AS - Science &amp; Information</h4>
+                    <h5 class="mb-3">SuperKing College</h5>
+                    <span>2001 - 2005</span>
+                    <p class="mt-3">The training provided by universities in order to prepare people to work in various
+                      sectors of
+                      the economy or areas of culture.
+                    </p>
+                  </div>
+                </div>
+                <!-- reapeat -->
+                <div class="col-md-5 position-relative" style="border-left: 2px solid;">
+                  <div class="eduction-box ps-4">
+                    <h4>AS - Science &amp; Information</h4>
+                    <h5 class="mb-3">SuperKing College</h5>
+                    <span>2001 - 2005</span>
+                    <p class="mt-3">The training provided by universities in order to prepare people to work in various
+                      sectors of
+                      the economy or areas of culture.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-5 position-relative" style="border-left: 2px solid;">
+                  <div class="eduction-box ps-4">
+                    <h4>AS - Science &amp; Information</h4>
+                    <h5 class="mb-3">SuperKing College</h5>
+                    <span>2001 - 2005</span>
+                    <p class="mt-3">The training provided by universities in order to prepare people to work in various
+                      sectors of
+                      the economy or areas of culture.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-5 position-relative" style="border-left: 2px solid;">
+                  <div class="eduction-box ps-4">
+                    <h4>AS - Science &amp; Information</h4>
+                    <h5 class="mb-3">SuperKing College</h5>
+                    <span>2001 - 2005</span>
+                    <p class="mt-3">The training provided by universities in order to prepare people to work in various
+                      sectors of
+                      the economy or areas of culture.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!----------------------------- resume ----------------------------->
+
+  <!----------------------------- Price ----------------------------->
+  <section class="pirce-wrapper">
+    <div class="container my-5">
+      <div class="row pt-5">
+        <div class="col-md-7">
+          <div class="price-left">
+            <div class="text-center text-md-start">
+              <h4 class="price-left-title">Price</h4>
+              <h2>The best pricing plans <br> to get your best</h2>
+            </div>
+            <div class="price-left-box">
+              <h3>Save up to <span style="color: var(--color-primary);">50%</span> with your every order
+              </h3>
+              <img class="cssanimation hu__hu__" src="assets/pirce-man.webp" alt="Thumb">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="price-right">
+            <div class="boxes frontend-box d-flex justify-content-between mt-md-0 mt-5">
+              <div class="d-flex flex-column gap-4">
+                <h4>Static frontend design</h4>
+                <ol class=" ps-3">
+                  <li><i class="fa-regular fa-circle-check me-2" style="color: #ffffff;"></i>1 Page with Elementor</li>
+                  <li><i class="fa-regular fa-circle-check me-2" style="color: #ffffff;"></i>Design Customization</li>
+                  <li><i class="fa-regular fa-circle-check me-2" style="color: #ffffff;"></i>Responsive Design</li>
+                </ol>
+                <button class="my-btn primary-btn"><span>Order Now</span></button>
+              </div>
+              <div class="d-flex flex-column justify-content-between">
+                <h1>$56</h1>
+                <i style="font-size: 60px; color: #21759b;" class="fa-brands fa-wordpress"></i>
+              </div>
+            </div>
+            <div class="boxes wordpres-box mt-4 d-flex justify-content-between">
+              <div class="d-flex flex-column gap-4">
+                <h4>Static frontend design</h4>
+                <ol class=" ps-3">
+                  <li><i class="fa-regular fa-circle-check me-2" style="color: #ffffff;"></i>1 Page with Elementor</li>
+                  <li><i class="fa-regular fa-circle-check me-2" style="color: #ffffff;"></i>Design Customization</li>
+                  <li><i class="fa-regular fa-circle-check me-2" style="color: #ffffff;"></i>Responsive Design</li>
+                </ol>
+                <button class="my-btn secondary-btn"><span>Order Now</span></button>
+              </div>
+              <div class="d-flex flex-column justify-content-between">
+                <h1>$56</h1>
+                <i style="font-size: 60px; color: #21759b;" class="fa-brands fa-wordpress"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!----------------------------- Price ----------------------------->
+
+  <!----------------------------- brand-swiper ----------------------------->
+  <section class="brand-wrapper">
+    <div class="container">
+      <!-- Swiper -->
+      <div class="swiper BrandSlide">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="/assets/brand/1.png" alt="" srcset="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/brand/2.png" alt="" srcset="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/brand/3.png" alt="" srcset="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/brand/4.png" alt="" srcset="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/brand/5.png" alt="" srcset="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/brand/1.png" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!----------------------------- brand-swiper ----------------------------->
+
+  <!-- section.expertise-wrapper>.container>.expertisse-title>h4{My Expertise}.expertise-title>h2{Customers feedback}. -->
+  <!----------------------------- my-Expertise ----------------------------->
+  <section class="expertise-wrapper">
+    <div class="container">
+      <div class="expertisse-header text-center my-5">
+        <h4 class="expertise-title">My Expertise</h4>
+        <h2 class="mb-4">Customers feedback</h2>
+        <hr style="height: 2px;opacity: 1;width: 70px;margin-inline: auto;color: var(--color-primary) !important;">
+      </div>
+      <div class="expertise-slider">
+        <!-- Swiper -->
+        <div class="swiper expertiseSlider">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="expertise-pic mt-3">
+                <img class="position-absoute" src="/assets/team.png" width="100%" alt="">
+                <div class="shape"></div>
+              </div>
+              <p class="text-center fs-5 mt-4"><q> ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+                  voluptatem cum, maxime deleniti
+                  aliquid autem doloribus suscipit earum accusamus, accusantium soluta magni minima odit harum, nesciunt
+                  quos optio! Exercitationem, maiores.</q></p>
+              <h4 class="m-0">RANA CHAND</h4>
+              <span class="fw-bold" style="color: var(--color-primary);;">Senior Developer</span>
+            </div>
+            <!-- reapeat -->
+            <div class="swiper-slide">
+              <div class="expertise-pic mt-3">
+                <img class="position-absoute" src="/assets/team.png" width="100%" alt="">
+                <div class="shape"></div>
+              </div>
+              <p class="text-center fs-5 mt-4"><q> ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+                  voluptatem cum, maxime deleniti
+                  aliquid autem doloribus suscipit earum accusamus, accusantium soluta magni minima odit harum, nesciunt
+                  quos optio! Exercitationem, maiores.</q></p>
+              <h4 class="m-0">RANA CHAND</h4>
+              <span class="fw-bold" style="color: var(--color-primary);;">Senior Developer</span>
+            </div>
+            <div class="swiper-slide">
+              <div class="expertise-pic mt-3">
+                <img class="position-absoute" src="/assets/team.png" width="100%" alt="">
+                <div class="shape"></div>
+              </div>
+              <p class="text-center fs-5 mt-4"><q> ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+                  voluptatem cum, maxime deleniti
+                  aliquid autem doloribus suscipit earum accusamus, accusantium soluta magni minima odit harum, nesciunt
+                  quos optio! Exercitationem, maiores.</q></p>
+              <h4 class="m-0">RANA CHAND</h4>
+              <span class="fw-bold" style="color: var(--color-primary);;">Senior Developer</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!----------------------------- my-Expertise ----------------------------->
+
+  <!----------------------------- freelance ----------------------------->
+  <section class="freelance-wrapper">
+    <div class="container">
+      <div class="freelance-box d-flex justify-content-center align-items-center flex-column gap-4">
+        <h1>I'm <span style="text-decoration: underline var(--color-primary) 4px">available</span> for <br> freelance
+          work</h1>
+        <button class="my-btn primary-btn"><span>Hire Me Now</span></button>
+        <div class="freelance-pic">
+          <img src="/assets/freelance-icon.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!----------------------------- freelance ----------------------------->
+
+  <!----------------------------- blog ----------------------------->
+  <section class="blog-wrapper">
+    <div class="container">
+      <div class="blog-header text-center my-5">
+        <h4 class="blog-title">News</h4>
+        <h2 class="mb-4">Latest from blog</h2>
+        <hr style="height: 2px;opacity: 1;width: 70px;margin-inline: auto;color: var(--color-primary) !important;">
+      </div>
+      <div class="row" style="row-gap: 30px;">
+        <div class="col-md-4">
+          <div class="card" style="box-shadow: rgba(100, 107, 115, 0.2) 0px 8px 24px;">
+            <a href="">
+              <img src="/assets/blog3.jpg" class="card-img-top rounded-3" alt="...">
+              <div class="card-body">
+                <h4 class="card-text">Discovery earnestly public commanded mentions.</h4>
+              </div>
+            </a>
+            <div class="card-footer d-flex justify-content-between">
+              <span><i class="me-2 fa-regular fa-circle-user"></i>USER</span>
+              <span><i class="me-2 fa-regular fa-calendar-days"></i>15 Auguest,2024</span>
+            </div>
+
+          </div>
+        </div>
+        <!-- reapeat -->
+        <div class="col-md-4">
+          <div class="card" style="box-shadow: rgba(100, 107, 115, 0.2) 0px 8px 24px;">
+            <a href="">
+              <img src="/assets/blog4.jpg" class="card-img-top rounded-3" alt="...">
+              <div class="card-body">
+                <h4 class="card-text">Discovery earnestly public commanded mentions.</h4>
+              </div>
+            </a>
+            <div class="card-footer d-flex justify-content-between">
+              <span><i class="me-2 fa-regular fa-circle-user"></i>USER</span>
+              <span><i class="me-2 fa-regular fa-calendar-days"></i>15 Auguest,2024</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="box-shadow: rgba(100, 107, 115, 0.2) 0px 8px 24px;">
+            <a href="">
+              <img src="/assets/blog2.jpg" class="card-img-top rounded-3" alt="...">
+              <div class="card-body">
+                <h4 class="card-text">Discovery earnestly public commanded mentions.</h4>
+              </div>
+            </a>
+            <div class="card-footer d-flex justify-content-between">
+              <span><i class="me-2 fa-regular fa-circle-user"></i>USER</span>
+              <span><i class="me-2 fa-regular fa-calendar-days"></i>15 Auguest,2024</span>
+            </div>
+
+          </div>
+        </div>
 
 
-  <section class="loooooooool" style="height: 100vh;"></section>
+      </div>
+    </div>
+  </section>
+  <!----------------------------- blog ----------------------------->
+
+  <!----------------------------- contact ----------------------------->
+  <section class="contact-wrapper">
+    <div class="container">
+      <h2 class="text-shade d-none d-xxl-block">contact</h2>
+      <div class="row my-5">
+        <div class="col-md-6">
+          <div class="contact-foam py-5 px-4 px-lg-5">
+            <h2>Let's talk?</h2>
+            <p>It's all about the humans behind a brand and those it, br we're right there. In the middle
+              performance quick.</p>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-floating mb-3">
+                  <input type="Name" class="form-control" id="floatingInput" placeholder="NAME">
+                  <label for="floatingInput">NAME</label>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                  <label for="floatingInput">Email *</label>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-floating mb-3">
+                  <input type="" class="form-control" id="floatingInput" placeholder="Number">
+                  <label for="floatingInput">Phone</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating mb-5">
+                  <textarea class="form-control" placeholder="Tell Us About Project" id="floatingTextarea2"
+                    style="height: 150px"></textarea>
+                  <label for="floatingTextarea2">Tell Us About Project *</label>
+                </div>
+              </div>
+              <button class="my-btn primary-btn"><span>Send Message</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center mt-md-0 mt-5">
+          <div class="contact-right d-flex flex-column gap-4">
+            <div class="d-flex align-items-center gap-4"><i class="fa-solid fa-envelope-open-text"></i>
+              <div class="">
+                <p class="mb-1">Our Email</p>
+                <h5 class="m-0"><a style="color: var(--white) !important;" href="">info@validtheme.com</a></h5>
+                <h5><a style="color: var(--white) !important;" href="">support@softar.com</a></h5>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-4"><i class="fa-solid fa-location-dot"></i>
+              <div class="">
+                <p class="mb-1">Address</p>
+                <h5 class="m-0"><a style="color: var(--white) !important;" href="">Madina Town <br> Block Z , Faisalabad
+                  </a></h5>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-4"><i class="fa-solid fa-phone"></i>
+              <div class="">
+                <p class="mb-1">Phone</p>
+                <h5 class="m-0"><a style="color: var(--white) !important;" href="">+92 303 0183183</a></h5>
+                <h5 class="m-0"><a style="color: var(--white) !important;" href="">+92 326 0183183</a></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!----------------------------- contact ----------------------------->
+
+  <!----------------------------- contact ----------------------------->
+  <footer class="footer-wrapper">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-md-start text-center">
+          <div class="footer-social">
+            <a href="">
+              <lord-icon src="https://cdn.lordicon.com/mpigogwa.json" trigger="loop"
+                style="width:30px;height:30px"></lord-icon>
+            </a>
+            <a href="">
+              <lord-icon src="https://cdn.lordicon.com/zmrclejd.json" trigger="loop"
+                style="width:30px;height:30px"></lord-icon>
+            </a>
+            <a href="">
+              <lord-icon src="https://cdn.lordicon.com/ftgjzwjn.json" trigger="loop"
+                style="width:30px;height:30px"></lord-icon>
+            </a>
+            <a href="">
+              <lord-icon src="https://cdn.lordicon.com/fjuachvi.json" trigger="loop"
+                style="width:30px;height:30px"></lord-icon>
+            </a>
+
+          </div>
+        </div>
+        <div class="col-md-6 text-md-end text-center">
+          <p class="m-0">© 2024 RANA BILAL JAVED. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!----------------------------- contact ----------------------------->
+
+  <!-- <section class="loooooooool" style="height: 100vh;"></section> -->
+
+  <!-- for typed -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <!-- cssanimation.io js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+  <script type="text/javascript" src="cssanimation-gsap.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script> -->
   <!-- bootstrap js -->
   <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> -->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- lordicon -->
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+
 
   <!-- own js -->
   <script src="/js/main.js"></script>

@@ -1,0 +1,79 @@
+@media screen and (max-width: 767.98px) {
+
+    .banner-wrapper,
+    .recent-project-wrapper,
+    .resume-wrapper,
+    .pirce-wrapper,
+    .brand-wrapper,
+    .expertise-wrapper,
+    .freelance-wrapper,
+    .blog-wrapper,
+    .contact-wrapper,
+    .footer-wrapper {
+        padding-left: 0px !important;
+    }
+
+    .service-wrapper {
+        margin: unset;
+    }
+
+    .banner-wrapper h1,
+    .freelance-wrapper h1 {
+        font-size: 2.5rem !important;
+    }
+
+    /* .resume-wrapper .tabs-header {
+        display: non;
+    } */
+
+    .resume-wrapper .tabs-header {
+        background: transparent !important;
+        border: none;
+    }
+
+    .resume-wrapper .tabs-header .nav-item {
+        width: 80%;
+        margin-inline: auto;
+    }
+
+    .resume-wrapper .tabs-header .nav-link {
+        background: #15091b !important
+    }
+
+    .pirce-wrapper .price-left-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .resume-wrapper .tabs-header {
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 400px) {
+    .resume-wrapper .Skills .Skills-content h5 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .resume-wrapper .Biography,
+    .resume-wrapper .Skills,
+    .resume-wrapper .Education {
+        padding: 25px;
+        width: 100%;
+    }
+
+    .resume-wrapper .Education {
+        background-color: transparent !important;
+        border: none;
+    }
+
+    .expertise-wrapper .expertise-slider {
+        width: 100%;
+    }
+}

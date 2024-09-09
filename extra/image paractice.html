@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider-pic {
+            position: relative;
+            width: 250px;
+            margin: auto;
+            border-radius: 0 0 480px 485px;
+            overflow: hidden;
+        }
+
+        .slider-pic::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            height: 250px;
+            width: 250px;
+            background: green;
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        .shape img {
+            position: absolute;
+            /* background-color: blue; */
+            bottom: -100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-pic">
+        <img src="/assets/team.png" width="100%" alt="">
+        <div class="shape">
+            <img src="/assets/rp2_files/15.png" width="55%" alt="" srcset="">
+        </div>
+    </div>
+
+    <!-- <div class="thumb">
+        <img src="assets/img/team/2.png" alt="Thumb">
+        <div class="shape">
+            <img src="assets/img/shape/15.png" alt="Shape">
+        </div>
+    </div> -->
+
+</body>
+
+</html>
