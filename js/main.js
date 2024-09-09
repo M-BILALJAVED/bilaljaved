@@ -1,5 +1,18 @@
+// preloader
+window.onload = function () {
+    setTimeout(function () {
+        document.querySelector('.overlap-loader').remove();
+    }, 100);
+
+    setTimeout(function () {
+        document.querySelector('.pre-loader').style.display = 'none';
+        document.querySelector('.pre-loader').remove();
+    }, 1200);
+};
+
+// banner typing 
 var typed = new Typed('#bannerTyping', {
-    strings: ['<i>BILAL</i>.', 'USMAN.', 'JAVED'],
+    strings: ['UI/UX Design.', 'Responsive Web Design.', 'Version Control ', 'Front-end Frameworks', 'Search engine optimization'],
     loop: true,
     typeSpeed: 100,
     backSpeed: 80,
@@ -17,7 +30,7 @@ var swiper = new Swiper('.BrandSlide', {
     // Responsive breakpoints
     breakpoints: {
         320: {
-            slidesPerView:2,
+            slidesPerView: 2,
             spaceBetween: 10
         },
         640: {

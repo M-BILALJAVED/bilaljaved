@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+    cursor: pointer;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-secondary);
+}
 
 /* Varialbes */
 :root {
@@ -94,6 +114,7 @@ body {
     background-position: top center;
     color: var(--white) !important;
     font-family: var(--font-default);
+    cursor: url('/assets/arrow.png'), auto;
 }
 
 .my-btn,
@@ -139,6 +160,45 @@ body {
 .my-btn:hover::before {
     width: 100%;
     transform: translate(-50%, -50%) skewX(0deg);
+}
+
+/* Pre-loader */
+.pre-loader {
+    position: fixed;
+    width: 100%;
+    cursor: none !important;
+    top: 0;
+    z-index: 999;
+}
+
+.pre-loader .overlap-loader {
+    position: absolute;
+    color: var(--color-primary);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50px, -50px) rotate(360deg);
+    z-index: 1;
+
+}
+
+.pre-loader .row .col-3 .bg-loader {
+    background-color: white;
+    height: 100vh;
+    overflow: hidden;
+    animation: pre-loader 1.5s ease-out 0.5s;
+    /* border: 2px solid black; */
+}
+
+@keyframes pre-loader {
+    from {
+        width: 100%;
+        opacity: 1;
+    }
+
+    to {
+        width: 0%;
+        opacity: 0.5;
+    }
 }
 
 
@@ -465,9 +525,6 @@ body {
 }
 
 /* tab-content */
-.resume-wrapper .tab-content {
-    /* background-color: #00c0ff !important; */
-}
 
 .resume-wrapper .Biography,
 .resume-wrapper .Skills,
@@ -486,10 +543,6 @@ body {
 .blog-wrapper .card .card-footer,
 .contact-wrapper p {
     opacity: 0.6;
-}
-
-.resume-wrapper .row:nth-child(2) ul li:last-child:after {
-    display: none !important;
 }
 
 .resume-wrapper .row:nth-child(2) ul li::after {
