@@ -1,3 +1,10 @@
+AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: false,
+    offset: 100
+});
+
 // preloader
 window.onload = function () {
     setTimeout(function () {
@@ -9,6 +16,29 @@ window.onload = function () {
         document.querySelector('.pre-loader').remove();
     }, 1200);
 };
+// Counter Element
+function animateCounter(element, start, end, duration) {
+    let startTime = null;
+    const range = end - start;
+    const step = (timestamp) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        const value = Math.floor(progress * range + start);
+        element.textContent = value;
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    };
+    requestAnimationFrame(step);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const counterNumber1 = document.getElementById('counterNumber1');
+    const counterNumber2 = document.getElementById('counterNumber2');
+
+    animateCounter(counterNumber1, 0, 465, 2000); // Counter 1: 0 to 465
+    animateCounter(counterNumber2, 0, 75, 2000); // Counter 2: 0 to 75
+});
 
 // banner typing 
 var typed = new Typed('#bannerTyping', {

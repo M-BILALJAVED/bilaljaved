@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RANA BILAL JAVED</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <!-- our own style  -->
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/responsive.css">
@@ -21,6 +22,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Aos  -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+
+  </style>
 
 </head>
 
@@ -64,16 +70,30 @@
           <img src="/assets/logo-icon.png" alt="">
         </span>
         <button class="fa-solid fa-xmark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        <!-- <button type="button" ></button> -->
       </div>
       <div class="offcanvas-body">
         <ul class="ps-2">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#expertise">expertise</a></li>
-          <li><a href="#portfolio">portfolio</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#blog">blog</a></li>
-          <li><a href="#contact">contact</a></li>
+          <a data-bs-dismiss="offcanvas" href="#home">
+            <li>Home</li>
+          </a>
+          <a data-bs-dismiss="offcanvas" href="#service-wrapper">
+            <li>expertise</li>
+          </a>
+          <a data-bs-dismiss="offcanvas" href="#recent-project-wrapper">
+            <li>portfolio</li>
+          </a>
+          <a data-bs-dismiss="offcanvas" href="#about-wapper">
+            <li>about</li>
+          </a>
+          <a data-bs-dismiss="offcanvas" href="#resume-wrapper">
+            <li>Resume</li>
+          </a>
+          <a data-bs-dismiss="offcanvas" href="#blog-wrapper">
+            <li>blog</li>
+          </a>
+          <a data-bs-dismiss="offcanvas" href="#contact-wrapper">
+            <li>contact</li>
+          </a>
         </ul>
       </div>
     </div>
@@ -93,27 +113,32 @@
           </a>
         </li>
         <li>
-          <a href="#"><i class="fas fa-cog"></i>
+          <a href="#service-wrapper"><i class="fas fa-cog"></i>
             <div class="menu-name">Services</div>
           </a>
         </li>
         <li>
-          <a href="#"><i class="fas fa-briefcase"></i>
+          <a href="#recent-project-wrapper"><i class="fas fa-briefcase"></i>
             <div class="menu-name">Portfolio</div>
           </a>
         </li>
         <li>
-          <a href="#"><i class="fas fa-user"></i>
+          <a href="#about-wapper"><i class="fas fa-user"></i>
             <div class="menu-name">About</div>
           </a>
         </li>
         <li>
-          <a href="#"><i class="fas fa-file-alt"></i>
+          <a href="#resume-wrapper"><i class="fas fa-file-alt"></i>
             <div class="menu-name">Resume</div>
           </a>
         </li>
         <li class="border-0">
-          <a><i class="fas fa-comments"></i>
+          <a href="#blog-wrapper"><i class="fas fa-blog"></i>
+            <div class="menu-name">Blog</div>
+          </a>
+        </li>
+        <li class="border-0">
+          <a href="#contact-wrapper"><i class="fas fa-comments"></i>
             <div class="menu-name">Contact</div>
           </a>
         </li>
@@ -127,7 +152,7 @@
   <!----------------------------- header-left ----------------------------->
 
   <!----------------------------- banner ----------------------------->
-  <section class="banner-wrapper mt-5">
+  <section class="banner-wrapper mt-5" id="banner-wrapper">
     <div class="container">
       <div class="row justify-content-center align-items-center">
         <div class="col-lg-6 ">
@@ -155,7 +180,7 @@
   <!----------------------------- banner ----------------------------->
 
   <!----------------------------- service ----------------------------->
-  <section class="service-wrapper">
+  <section class="service-wrapper" id="service-wrapper">
     <div class="container py-5">
       <div class="service-design">
         <img src="/assets/1-light.png" width="200px" alt="" srcset="">
@@ -165,13 +190,13 @@
         <h1 class="position-relative">What I Do</h1>
       </div>
       <div class="row justify-content-around mt-5 text-center text-md-start">
-        <div class="col-md-4 py-4" style="max-width: 250px;">
+        <div class="col-md-4 py-4" style="max-width: 250px;" >
           <img class="mb-4" src="/assets/1.png" width="80px" alt="">
           <h3 class="mb-3"><a class="text-white" href="">Responsive Web Design</a></h3>
           <p> Proficient in building websites and applications that adapt seamlessly to various devices, ensuring
             optimal user experiences across desktops, tablets, and mobile devices.</p>
         </div>
-        <div class="col-md-4 py-4" style="max-width: 250px;">
+        <div class="col-md-4 py-4" style="max-width: 250px;" data-aos="fade-up">
           <img class="mb-4" src="/assets/2.png" width="80px" alt="">
           <h3 class="mb-3"><a class="text-white" href="">UI/UX Implementation</a></h3>
           <p>Skilled in translating UI/UX designs into interactive, intuitive interfaces, ensuring a perfect balance
@@ -190,7 +215,7 @@
   <!----------------------------- service ----------------------------->
 
   <!----------------------------- Recent project ----------------------------->
-  <section class="recent-project-wrapper">
+  <section class="recent-project-wrapper" id="recent-project-wrapper">
     <div class="container my-5">
       <div class="row pt-5">
         <div class="col-12 text-md-start text-center">
@@ -203,11 +228,15 @@
         </div>
         <div class="col-md-6 mt-4 mt-md-0 d-flex gap-5 justify-content-md-start justify-content-center">
           <div class="for-line text-center">
-            <h1 class="fw-bolder">256K</h1>
+            <h1 class="fw-bolder counter" id="counter1" data-aos="fade-left">
+              <span id="counterNumber1">0</span><span>K</span>
+            </h1>
             <span>Completed Project</span>
           </div>
           <div class="text-center">
-            <h1 class="fw-bolder">94%</h1>
+            <h1 class="fw-bolder counter" id="counter2" data-aos="fade-right">
+              <span id="counterNumber2">0</span><span>%</span>
+            </h1>
             <span>Positive Rating</span>
           </div>
         </div>
@@ -269,7 +298,7 @@
   <!----------------------------- Recent project ----------------------------->
 
   <!----------------------------- about us ----------------------------->
-  <section class="about-wapper">
+  <section class="about-wapper" id="about-wapper">
     <div class="container">
       <div class="row flex-wrap-reverse gap-5 gap-md-0">
         <div class="col-md-6">
@@ -311,7 +340,7 @@
   <!----------------------------- about us ----------------------------->
 
   <!----------------------------- resume ----------------------------->
-  <section class="resume-wrapper">
+  <section class="resume-wrapper" id="resume-wrapper">
     <div class="container">
       <div class="tabs-header">
         <ul class="nav nav-pills justify-content-between" id="pills-tab" style="margin: 6px !important; row-gap: 10px;">
@@ -668,7 +697,7 @@
   <!----------------------------- freelance ----------------------------->
 
   <!----------------------------- blog ----------------------------->
-  <section class="blog-wrapper">
+  <section class="blog-wrapper" id="blog-wrapper">
     <div class="container">
       <div class="blog-header text-center my-5">
         <h4 class="blog-title">News</h4>
@@ -730,7 +759,7 @@
   <!----------------------------- blog ----------------------------->
 
   <!----------------------------- contact ----------------------------->
-  <section class="contact-wrapper">
+  <section class="contact-wrapper" id="contact-wrapper">
     <div class="container">
       <h2 class="text-shade d-none d-xxl-block">contact</h2>
       <div class="row my-5">
@@ -838,7 +867,6 @@
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <!-- cssanimation.io js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
-  <script type="text/javascript" src="cssanimation-gsap.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script> -->
   <!-- bootstrap js -->
   <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -847,7 +875,8 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- lordicon -->
   <script src="https://cdn.lordicon.com/lordicon.js"></script>
-
+  <!-- Aos  -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
   <!-- own js -->

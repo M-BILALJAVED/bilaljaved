@@ -115,6 +115,7 @@ body {
     color: var(--white) !important;
     font-family: var(--font-default);
     cursor: url('/assets/arrow.png'), auto;
+    padding: 0 !important;
 }
 
 .my-btn,
