@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 
 /* scrollbar */
 ::-webkit-scrollbar {
@@ -41,9 +42,8 @@
     --bg-gradient: linear-gradient(45deg, var(--color-secondary) 0%, var(--color-primary) 70%);
     --bg-gradient: linear-gradient(45deg, var(--color-secondary) 0%, var(--color-primary) 70%);
 }
-[data-theme="dark"] {
-  
-  }
+
+[data-theme="dark"] {}
 
 * {
     padding: 0;
@@ -842,4 +842,62 @@ button:focus {
 /* foooter  */
 .footer-wrapper {
     background-color: #003d63 !important;
+}
+
+/* BLOG_PAGE */
+.BLOG_PAGE .BLOG_PAGE-span i {
+    color: var(--color-primary);
+}
+
+.BLOG_PAGE .BLOG_PAGE-span span:hover {
+    color: var(--color-primary);
+}
+
+.BLOG_PAGE p {
+    opacity: 0.7 !important;
+}
+
+.BLOG_PAGE .BLOG_PAGE-fancy {
+    background-color: #003d63;
+    padding: 50px;
+    border-radius: 10px;
+    font-family: "Nerko One", cursive;
+}
+
+.BLOG_PAGE .BLOG_PAGE-auther,
+.BLOG_PAGE .BLOG_PAGE-comment {
+    background-color: #003d63;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.BLOG_PAGE .BLOG_PAGE-tag a,
+.BLOG_PAGE .BLOG_PAGE-comment a {
+    padding: 5px;
+    color: var(--white) !important;
+    background-color: #003d63;
+    border-radius: 5px;
+}
+
+.BLOG_PAGE .BLOG_PAGE-tag a:hover {
+    background-color: var(--color-primary);
+}
+
+.BLOG_PAGE .BLOG_PAGE-comment a {
+    background-color: var(--color-primary);
+}
+
+.BLOG_PAGE .BLOG_PAGE-comment span {
+    opacity: 0.8 !important;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.BLOG_PAGE-form .form-control {
+    background: transparent !important;
+    color: var(--white) !important;
+}
+
+.BLOG_PAGE-form .form-control:focus {
+    box-shadow: none;
 }

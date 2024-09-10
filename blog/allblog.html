@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering Front-End Development with RANA BILAL JAVED | RANA BILAL JAVED</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <!-- our own style  -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">  -->
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/57efafa6c2.js" crossorigin="anonymous"></script>
+    <!-- Local Themify Icons -->
+    <link rel="stylesheet" href="/themify-icons/themify-icons.css">
+    <!-- cssanimation.io css -->
+    <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet">
+    <!-- animation.style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Aos  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .ALL_BLOG_CARD .card {
+            background: transparent !important;
+        }
+
+        .ALL_BLOG_CARD .card-text {
+            font-size: 1.25rem;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            overflow: hidden;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!----------------------------- pre-loader ----------------------------->
+    <section class="pre-loader">
+        <div class="container-fluid">
+            <div class="overlap-loader">
+                <div class="spinner-border" style="width: 5rem; height: 5rem;" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 m-0 p-0">
+                    <div class="bg-loader"></div>
+                </div>
+                <div class="col-3 m-0 p-0">
+                    <div class="bg-loader"></div>
+                </div>
+                <div class="col-3 m-0 p-0">
+                    <div class="bg-loader"></div>
+                </div>
+                <div class="col-3 m-0 p-0">
+                    <div class="bg-loader"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------- pre-loader ----------------------------->
+
+    <!----------------------------- scrol ----------------------------->
+    <button type="button" class="scroll-btn btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!----------------------------- scrol ----------------------------->
+
+    <!----------------------------- header-below-md ----------------------------->
+    <header class="header-below-md d-md-none d-flex justify-content-center">
+        <img class="" src="/assets/logo-icon.png" alt="">
+        <i class="fa-solid fa-bars" class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasleft" aria-controls="offcanvasleft"></i>
+        <!--  -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasleft" aria-labelledby="offcanvasleftLabel">
+            <div class="offcanvas-header">
+                <span id="offcanvasleftLabel">
+                    <img src="/assets/logo-icon.png" alt="">
+                </span>
+                <button class="fa-solid fa-xmark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="ps-2">
+                    <a data-bs-dismiss="offcanvas" href="#home">
+                        <li>Home</li>
+                    </a>
+                    <a data-bs-dismiss="offcanvas" href="#service-wrapper">
+                        <li>expertise</li>
+                    </a>
+                    <a data-bs-dismiss="offcanvas" href="#recent-project-wrapper">
+                        <li>portfolio</li>
+                    </a>
+                    <a data-bs-dismiss="offcanvas" href="#about-wapper">
+                        <li>about</li>
+                    </a>
+                    <a data-bs-dismiss="offcanvas" href="#resume-wrapper">
+                        <li>Resume</li>
+                    </a>
+                    <a data-bs-dismiss="offcanvas" href="#blog-wrapper">
+                        <li>blog</li>
+                    </a>
+                    <a data-bs-dismiss="offcanvas" href="#contact-wrapper">
+                        <li>contact</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!----------------------------- header-below-md ----------------------------->
+
+    <!----------------------------- header-left ----------------------------->
+    <header class="header-left d-md-flex d-none flex-column position-fixed justify-content-between align-items-center">
+        <div class="logo">
+            <a href="#"><img src="/assets/logo-icon.png" alt="" srcset=""></a>
+        </div>
+        <div class="menu">
+            <ul class="nav d-flex flex-column text-center">
+                <li>
+                    <a href="#"><i class="fas fa-home"></i>
+                        <div class="menu-name">Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#service-wrapper"><i class="fas fa-cog"></i>
+                        <div class="menu-name">Services</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#recent-project-wrapper"><i class="fas fa-briefcase"></i>
+                        <div class="menu-name">Portfolio</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about-wapper"><i class="fas fa-user"></i>
+                        <div class="menu-name">About</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#resume-wrapper"><i class="fas fa-file-alt"></i>
+                        <div class="menu-name">Resume</div>
+                    </a>
+                </li>
+                <li class="border-0">
+                    <a href="#blog-wrapper"><i class="fas fa-blog"></i>
+                        <div class="menu-name">Blog</div>
+                    </a>
+                </li>
+                <li class="border-0">
+                    <a href="#contact-wrapper"><i class="fas fa-comments"></i>
+                        <div class="menu-name">Contact</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-video">
+            <!-- <a href=""><i class="fas fa-play"></i></a> -->
+        </div>
+
+    </header>
+    <!----------------------------- header-left ----------------------------->
+
+    <!----------------------------- BLOG ----------------------------->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto my-4 text-center">
+                    <h1>All BLOG</h1>
+                    <div class="ALL_BLOG_CARD my-5">
+                        <div class="row" id="ALL_BLOG_CARD" style="row-gap: 25px;">
+                            <div class="col-md-4">
+                                <div class="card" style="box-shadow: rgba(100, 107, 115, 0.2) 0px 8px 24px;">
+                                    <a href="">
+                                        <img src="/assets/blog3.jpg" class="card-img-top rounded-3" alt="...">
+                                        <div class="card-body">
+                                            <h4 class="card-text">Discovery earnestly public commanded mentions.</h4>
+                                        </div>
+                                    </a>
+                                    <div class="card-footer d-flex justify-content-between">
+                                        <span><i class="me-2 fa-regular fa-circle-user"></i>USER</span>
+                                        <span><i class="me-2 fa-regular fa-calendar-days"></i>15 Auguest,2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------- BLOG ----------------------------->
+
+
+    <!----------------------------- contact ----------------------------->
+    <footer class="footer-wrapper">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-md-start text-center">
+                    <div class="footer-social">
+                        <a href="">
+                            <lord-icon src="https://cdn.lordicon.com/mpigogwa.json" trigger="loop"
+                                style="width:30px;height:30px"></lord-icon>
+                        </a>
+                        <a href="">
+                            <lord-icon src="https://cdn.lordicon.com/zmrclejd.json" trigger="loop"
+                                style="width:30px;height:30px"></lord-icon>
+                        </a>
+                        <a href="">
+                            <lord-icon src="https://cdn.lordicon.com/ftgjzwjn.json" trigger="loop"
+                                style="width:30px;height:30px"></lord-icon>
+                        </a>
+                        <a href="">
+                            <lord-icon src="https://cdn.lordicon.com/fjuachvi.json" trigger="loop"
+                                style="width:30px;height:30px"></lord-icon>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end text-center">
+                    <p class="m-0">© 2024 RANA BILAL JAVED. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!----------------------------- contact ----------------------------->
+
+
+    <!-- for typed -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- cssanimation.io js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script> -->
+    <!-- bootstrap js -->
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- lordicon -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <!-- Aos  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <!-- own js -->
+    <script src="/js/main.js"></script>
+    <script src="allblog.js"></script>
+</body>
+
+</html>

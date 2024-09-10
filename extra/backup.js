@@ -114,49 +114,71 @@ var swiper = new Swiper('.expertiseSlider', {
         disableOnInteraction: true,
     },
 });
-// //......................................................................
+//......................................................................
+/// Declare the variable in the global scope
+let vip;
+const id = parseInt(localStorage.getItem('id')) || 1;
+const tittilee = id - 1;
+let looooop;
+for (let i = 1; i <= 4; i++) {
+    looooop = i;
+    console.log(looooop);
+}
+// Fetch products from the API
+fetch('https://dummyjson.com/products')
+    .then(res => res.json())
+    .then(json => {
+        // Access the products array from the JSON response
+        const products = json.products;
 
-// const addBlogDetail = document.getElementById('addBlogDetail');
-// addBlogDetail.innerHTML = '';
+        // Log the entire products array
+        console.log(products);
 
-// // Fetch products from the API
-// fetch('https://dummyjson.com/products')
-//     .then(res => res.json())
-//     .then(json => {
-//         // Access the products array from the JSON response
-//         const products = json.products;
+        // Set the global `vip` variable
+        if (products.length > tittilee) {
+            vip = products[tittilee].title;
+            console.log('Product title:', vip);
 
-//         // Log the entire products array
-//         console.log(products);
+            // Generate blog cards after fetching data
+            generateBlogCards();
+        } else {
+            console.error('Product index out of bounds');
+        }
+    })
+    .catch(error => console.error('Error fetching the products:', error));
 
-//         // Set the global `vip` variable
-//         if (products.length > 0) {
-//             const vip = products[0].title;
-//             console.log('Product title:', vip);
+// Function to generate blog cards
+function generateBlogCards() {
+    let blogid = 1;
+    const addBlogDetail = document.querySelector('#addBlogDetail');
 
-//             // Generate blog cards after fetching data
-//             let blogCardsHTML = '';
-//             products.forEach(product => {
-//                 blogCardsHTML += `
-//         <div class="col-md-4">
-//           <div class="card" style="box-shadow: rgba(100, 107, 115, 0.2) 0px 8px 24px;" >
-//             <a href="/blog/blog${product.id}.html">
-//               <img src="${product.images[0]}" class="card-img-top rounded-3" alt="...">
-//               <div class="card-body">
-//                 <h4 class="card-text">${product.title}</h4>
-//               </div>
-//             </a>
-//             <div class="card-footer d-flex justify-content-between">
-//               <span><i class="me-2 fa-regular fa-circle-user"></i>USER</span>
-//               <span><i class="me-2 fa-regular fa-calendar-days"></i>15 Auguest,2024</span>
-//             </div>
-//           </div>
-//         </div>
-//                 `;
-//             });
-//             addBlogDetail.innerHTML = blogCardsHTML;
-//         } else {
-//             console.error('No products found');
-//         }
-//     })
-//     .catch(error => console.error('Error fetching the products:', error));
+    let blogLinksHTML = '';
+    for (let i = 0; i < id; i++) {
+        const bloglink = `
+      <div class="col-md-4">
+        <div class="card" style="box-shadow: rgba(100, 107, 115, 0.2) 0px 8px 24px;">
+          <a href="/blog/blog${blogid}.html">
+            <img src="/assets/blog3.jpg" class="card-img-top rounded-3" alt="...">
+            <div class="card-body">
+              <h4 class="card-text">${vip}</h4>
+            </div>
+          </a>
+          <div class="card-footer d-flex justify-content-between">
+            <span><i class="me-2 fa-regular fa-circle-user"></i>USER</span>
+            <span><i class="me-2 fa-regular fa-calendar-days"></i>15 August, 2024</span>
+          </div>
+        </div>
+      </div>`;
+
+        // Accumulate the generated bloglink HTML
+        blogLinksHTML += bloglink;
+
+        // Increment blogid for the next blog card
+        blogid++;
+    }
+
+    // Insert the accumulated HTML into the addBlogDetail element
+    addBlogDetail.innerHTML = blogLinksHTML;
+
+    console.log(addBlogDetail);
+}

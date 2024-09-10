@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADMIN</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body class="bg-dark text-white">
+  <div class="container">
+    <h1 class="text-center text-uppercase">Post Blog Admin</h1>
+    <form action="">
+      <div class="row justify-content-center">
+        <div class="col-4">
+          <div class="mb-3">
+            <label class="form-label" for="htmlInput">PIC</label>
+            <input id="picc" class="form-control" type="text">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="mb-3">
+            <label class="form-label" for="TITLE">TITLE</label>
+            <input id="TITLE" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mb-3">
+            <label class="form-label" for="firstParagraph">First Paragraph</label>
+            <textarea id="firstParagraph" class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mb-3">
+            <label class="form-label" for="SecondParagraph">Second Paragraph</label>
+            <textarea id="SecondParagraph" class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="mb-3">
+            <label class="form-label" for="FANCYParagraph">Fancy Paragraph</label>
+            <textarea id="FANCYParagraph" class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+    <button id="downloadBtn" class="my-btn primary-btn mx-auto mt-3" style="place-items: center;display: grid;">
+      <span>Submit</span>
+    </button>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+
+</html>
