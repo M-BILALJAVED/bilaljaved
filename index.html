@@ -888,6 +888,61 @@
 
   <!-- own js -->
   <script src="/js/main.js"></script>
+  <script>
+    (() => {
+        const stars = [];
+        const requestAnimationFramePolyfill = window.requestAnimationFrame || 
+            (callback => setTimeout(callback, 1000 / 60));
+
+        function animateStars() {
+            stars.forEach((star, index) => {
+                if (star.alpha <= 0) {
+                    document.body.removeChild(star.element);
+                    stars.splice(index, 1);
+                } else {
+                    star.y--;
+                    star.scale += 0.02;
+                    star.alpha -= 0.02;
+                    star.element.style.cssText = `
+                        left: ${star.x}px;
+                        top: ${star.y}px;
+                        opacity: ${star.alpha};
+                        transform: scale(${star.scale}) rotate(45deg);
+                        background: ${star.color};
+                        z-index: 99999;
+                    `;
+                }
+            });
+            requestAnimationFramePolyfill(animateStars);
+        }
+
+        function createStar(event) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            const color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+            stars.push({
+                element: star,
+                x: event.clientX - 5,
+                y: event.clientY - 5,
+                scale: 1,
+                alpha: 1,
+                color
+            });
+            document.body.appendChild(star);
+        }
+
+        function handleEvent(event) {
+            event.preventDefault(); // Prevent default behavior on touch devices
+            createStar(event);
+        }
+
+        // Add event listeners for both mouse and touch
+        document.addEventListener('mousemove', handleEvent);
+        document.addEventListener('touchmove', handleEvent);
+
+        animateStars();
+    })();
+</script>
 </body>
 
 </html>
