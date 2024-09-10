@@ -115,6 +115,50 @@ var swiper = new Swiper('.expertiseSlider', {
     },
 });
 // //......................................................................
+(() => {
+    const hearts = [];
+    const requestAnimationFramePolyfill = window.requestAnimationFrame || 
+        (callback => setTimeout(callback, 1000 / 60));
+
+    function animateHearts() {
+        hearts.forEach((heart, index) => {
+            if (heart.alpha <= 0) {
+                document.body.removeChild(heart.element);
+                hearts.splice(index, 1);
+            } else {
+                heart.y--;
+                heart.scale += 0.004;
+                heart.alpha -= 0.013;
+                heart.element.style.cssText = `
+                    left: ${heart.x}px;
+                    top: ${heart.y}px;
+                    opacity: ${heart.alpha};
+                    transform: scale(${heart.scale}) rotate(45deg);
+                    background: ${heart.color};
+                    z-index: 99999;
+                `;
+            }
+        });
+        requestAnimationFramePolyfill(animateHearts);
+    }
+
+    document.onclick = (event) => {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        const color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+        hearts.push({
+            element: heart,
+            x: event.clientX - 5,
+            y: event.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color
+        });
+        document.body.appendChild(heart);
+    };
+
+    animateHearts();
+})();
 
 // const addBlogDetail = document.getElementById('addBlogDetail');
 // addBlogDetail.innerHTML = '';
