@@ -240,7 +240,7 @@ button:focus {
 }
 
 .header-left .logo {
-    background-color: var(--color-primary);
+    background-color: floralwhite;
     padding: 15px;
 }
 
@@ -304,7 +304,6 @@ button:focus {
 }
 
 .header-below-md .offcanvas img {
-    background-color: #00c0ff;
     height: 80px;
 }
 

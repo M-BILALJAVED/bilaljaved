@@ -66,14 +66,14 @@
 
   <!----------------------------- header-below-md ----------------------------->
   <header class="header-below-md d-md-none d-flex justify-content-center">
-    <img class="" src="/assets/logo-icon.png" alt="">
+    <img class="" src="/assets/my-logo.svg" alt="">
     <i class="fa-solid fa-bars" class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasleft" aria-controls="offcanvasleft"></i>
     <!--  -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasleft" aria-labelledby="offcanvasleftLabel">
       <div class="offcanvas-header">
         <span id="offcanvasleftLabel">
-          <img src="/assets/logo-icon.png" alt="">
+          <img src="/assets/my-logo.svg" alt="">
         </span>
         <button class="fa-solid fa-xmark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
@@ -109,7 +109,7 @@
   <!----------------------------- header-left ----------------------------->
   <header class="header-left d-md-flex d-none flex-column position-fixed justify-content-between align-items-center">
     <div class="logo">
-      <a href="#"><img src="/assets/logo-icon.png" alt="" srcset=""></a>
+      <a href="#"><img src="/assets/my-logo.svg" srcset=""></a>
     </div>
     <div class="menu">
       <ul class="nav d-flex flex-column text-center">
@@ -171,7 +171,8 @@
                 </ul>
               </div>
               <div class=" mt-5">
-                <button class="my-btn primary-btn"><span>My Resume</span></button>
+                <a href="/images/myw3schoolsimage.jpg" download><button class="my-btn primary-btn"><span>My
+                      Resume</span></button></a>
                 <button class="my-btn secondary-btn"><span>Hire me</span></button>
               </div>
             </h3>
@@ -890,20 +891,20 @@
   <script src="/js/main.js"></script>
   <script>
     (() => {
-        const stars = [];
-        const requestAnimationFramePolyfill = window.requestAnimationFrame || 
-            (callback => setTimeout(callback, 1000 / 60));
+      const stars = [];
+      const requestAnimationFramePolyfill = window.requestAnimationFrame ||
+        (callback => setTimeout(callback, 1000 / 60));
 
-        function animateStars() {
-            stars.forEach((star, index) => {
-                if (star.alpha <= 0) {
-                    document.body.removeChild(star.element);
-                    stars.splice(index, 1);
-                } else {
-                    star.y--;
-                    star.scale += 0.02;
-                    star.alpha -= 0.02;
-                    star.element.style.cssText = `
+      function animateStars() {
+        stars.forEach((star, index) => {
+          if (star.alpha <= 0) {
+            document.body.removeChild(star.element);
+            stars.splice(index, 1);
+          } else {
+            star.y--;
+            star.scale += 0.02;
+            star.alpha -= 0.02;
+            star.element.style.cssText = `
                         left: ${star.x}px;
                         top: ${star.y}px;
                         opacity: ${star.alpha};
@@ -911,38 +912,38 @@
                         background: ${star.color};
                         z-index: 99999;
                     `;
-                }
-            });
-            requestAnimationFramePolyfill(animateStars);
-        }
+          }
+        });
+        requestAnimationFramePolyfill(animateStars);
+      }
 
-        function createStar(event) {
-            const star = document.createElement('div');
-            star.className = 'star';
-            const color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-            stars.push({
-                element: star,
-                x: event.clientX - 5,
-                y: event.clientY - 5,
-                scale: 1,
-                alpha: 1,
-                color
-            });
-            document.body.appendChild(star);
-        }
+      function createStar(event) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        const color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+        stars.push({
+          element: star,
+          x: event.clientX - 5,
+          y: event.clientY - 5,
+          scale: 1,
+          alpha: 1,
+          color
+        });
+        document.body.appendChild(star);
+      }
 
-        function handleEvent(event) {
-            event.preventDefault(); // Prevent default behavior on touch devices
-            createStar(event);
-        }
+      function handleEvent(event) {
+        event.preventDefault(); // Prevent default behavior on touch devices
+        createStar(event);
+      }
 
-        // Add event listeners for both mouse and touch
-        document.addEventListener('mousemove', handleEvent);
-        document.addEventListener('touchmove', handleEvent);
+      // Add event listeners for both mouse and touch
+      document.addEventListener('mousemove', handleEvent);
+      document.addEventListener('touchmove', handleEvent);
 
-        animateStars();
+      animateStars();
     })();
-</script>
+  </script>
 </body>
 
 </html>
